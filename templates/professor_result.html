@@ -1,0 +1,28 @@
+{% include 'professor.html' %}
+
+<br>
+<div class="row d-flex justify-content-center">
+<div style="width: 50%" class="form-group">
+{% for course in result %}
+
+<div class="alert alert-primary" role="alert">
+  <span style="white-space: nowrap;">Professor: </span>
+  {{ course.prname }}
+  <br>
+  <span style="white-space: nowrap;">Department: </span>
+  {{ course.dname }}
+  <br>
+  <span style="white-space: nowrap;">Program: </span>
+  {{ course.pname }}
+  <br>
+  <span style="white-space: nowrap;">Building: </span>
+  {{ course.building }}
+  <br>
+  <span style="white-space: nowrap;">Room: </span>
+  {{ course.room }}
+</div>
+
+{% endfor %}
+
+</div>
+</div>

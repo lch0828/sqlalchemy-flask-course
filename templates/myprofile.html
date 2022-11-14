@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+<style>
+.nobr {white-space: nowrap}
+</style>
+{% endblock scripts %}
+
+
+{% block content %}
+<div class="row d-flex justify-content-center">
+    <div style="width: 50%" class="form-group">
+      {% for pro in result %}
+      <br>
+      <div class="alert alert-primary" role="alert">
+        <span style="white-space: nowrap;">Student ID: </span>
+        {{ pro.sid }}
+        <br>
+        <span style="white-space: nowrap;">Student name: </span>
+        {{ pro.sname }}
+        <br>
+        <span style="white-space: nowrap;">Registered year: </span>
+        {{ pro.year }}
+        <br>
+        <span style="white-space: nowrap;">GPA: </span>
+        {{ pro.gpa }}
+        <br>
+        <span style="white-space: nowrap;">Program: </span>
+        {{ pro.pname }}
+      </div>
+      
+      {% endfor %}
+    
+    </div>
+    </div>
+
+{% endblock %}

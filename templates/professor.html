@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+<style>
+.nobr {white-space: nowrap}
+</style>
+{% endblock scripts %}
+
+
+{% block content %}
+<form method="POST">
+{{ form.hidden_tag() }}
+{# This hidden_tag is a CSRF security feature. #} 
+
+<div class="row d-flex justify-content-center">
+<div style="width: 25%" class="form-group">
+
+{{ form.professor.label }} 
+{{ form.professor(class_="form-control form-control-sm") }}
+
+{{ form.department.label }} 
+{{ form.department(class_="form-select form-select-sm") }}
+
+{{ form.program.label }} 
+{{ form.program(class_="form-select form-select-sm") }}
+
+{{ form.building.label }} 
+{{ form.building(class_="form-select form-select-sm") }}
+
+{{ form.room.label }} 
+{{ form.room(class_="form-select form-select-sm") }}
+
+<br>
+<div class="d-grid gap-2 col-6 mx-auto">
+    {{ form.submit(class="btn btn-primary btn-sm") }}
+</div>
+
+</div>
+</div>
+
+</form>
+
+
+{% endblock %}

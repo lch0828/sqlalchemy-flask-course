@@ -1,0 +1,49 @@
+{% include 'search.html' %}
+
+<br>
+<div class="row d-flex justify-content-center">
+<div style="width: 50%" class="form-group">
+{% for course in result %}
+
+<div class="alert alert-primary" role="alert">
+  <span style="white-space: nowrap;">Course ID: </span>
+  {{ course.cid }}
+  <br>
+  <span style="white-space: nowrap;">Course name: </span>
+  {{ course.cname }}
+  <br>
+  <span style="white-space: nowrap;">Department: </span>
+  {{ course.dname }}
+  <br>
+  <span style="white-space: nowrap;">Program: </span>
+  {{ course.pname }}
+  <br>
+  <span style="white-space: nowrap;">Professor: </span>
+  {{ course.prname }}
+  <br>
+  <span style="white-space: nowrap;">Building: </span>
+  {{ course.building }}
+  <br>
+  <span style="white-space: nowrap;">Room: </span>
+  {{ course.room }}
+  <br>
+  <span style="white-space: nowrap;">Year: </span>
+  {{ course.year }}
+  <br>
+  <span style="white-space: nowrap;">Semester: </span>
+  {{ course.semester }}
+  <br>
+  <span style="white-space: nowrap;">Day: </span>
+  {{ course.day }}
+  <br>
+  <span style="white-space: nowrap;">Start: </span>
+  {{ course.start_period }}
+  <br>
+  <span style="white-space: nowrap;">End: </span>
+  {{ course.end_period }}
+</div>
+
+{% endfor %}
+
+</div>
+</div>
