@@ -1,3 +1,5 @@
 sqlalchemy
 flask
-wtform
+flask_wtf
+psycopg2
+
